@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://dingpeikuan.github.io">
-  <title>Tag: 剑指offer | DPK&#39;Blogs</title>
+  <title>笔试复盘 | DPK&#39;Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="DPK&#39;Blogs">
-<meta property="og:url" content="https://dingpeikuan.github.io/tags/%E5%89%91%E6%8C%87offer/index.html">
+  <meta name="description" content="最近投的几家公司的笔试题，复盘一下吧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔试复盘">
+<meta property="og:url" content="https://dingpeikuan.github.io/2020/07/24/%E7%AC%94%E8%AF%95%E5%A4%8D%E7%9B%98/index.html">
 <meta property="og:site_name" content="DPK&#39;Blogs">
+<meta property="og:description" content="最近投的几家公司的笔试题，复盘一下吧。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-24T14:19:56.000Z">
+<meta property="article:modified_time" content="2020-07-24T15:02:09.129Z">
 <meta property="article:author" content="DingPeiKuan">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="笔试">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="DPK&#39;Blogs" type="application/atom+xml">
@@ -146,64 +152,229 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-笔试复盘" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/23/%E5%89%91%E6%8C%87offer%E7%B3%BB%E5%88%97/" class="archive-article-date">
-  	<time datetime="2020-07-23T15:16:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/23/%E5%89%91%E6%8C%87offer%E7%B3%BB%E5%88%97/">剑指offer系列</a>
+    <h1 class="article-title" itemprop="name">
+      笔试复盘
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/07/24/%E7%AC%94%E8%AF%95%E5%A4%8D%E7%9B%98/" class="archive-article-date">
+  	<time datetime="2020-07-24T14:19:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近投的几家公司的笔试题，复盘一下吧。</p>
+<a id="more"></a>
+
+<h1 id="广联达"><a href="#广联达" class="headerlink" title="广联达"></a>广联达</h1><h2 id="题目1-平行四边形构造"><a href="#题目1-平行四边形构造" class="headerlink" title="题目1:平行四边形构造"></a>题目1:平行四边形构造</h2><p><strong>题目描述：</strong></p>
+<p>给出你n条长度不一的边，请你从中选择四条边，组成一个最大的平行四边形。请你输出最大的平行四边形的面积。 </p>
+<p><strong>输入描述:</strong> </p>
+<p>输入第一行包含一个正整数n，表示边的数量。(4&lt;=n&lt;=50000) </p>
+<p>输入第二行包含n个正整数，表示n条边的长度，边的长度不会超过10^9。 </p>
+<p><strong>输出描述</strong> </p>
+<p>输出仅包含一个正整数，即最大的平行四边形的面积，无解则输出-1。</p>
+<p><strong>样例输入</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5 3 3 4 4 5</span><br></pre></td></tr></table></figure>
+
+<p><strong>样例输出</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">12</span><br></pre></td></tr></table></figure>
+
+<p><strong>思路：</strong>比较简单，就是求数组里面有重复的最大两个数。</p>
+<p><strong>注意事项：要用long类型定义边长，不能用int类型。否则不能通过所有测试例。</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> guanglianda;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SiBianXing1</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		HashMap&lt;Long, Integer&gt; hashMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">		Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> len = scanner.nextInt();</span><br><span class="line">		<span class="keyword">long</span>[] l = <span class="keyword">new</span> <span class="keyword">long</span>[len];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++) &#123;</span><br><span class="line">			l[i]=scanner.nextLong();</span><br><span class="line">			<span class="keyword">if</span>(hashMap.containsKey(l[i])) &#123;</span><br><span class="line">				<span class="keyword">int</span> temp = hashMap.get(l[i]);</span><br><span class="line">				hashMap.put(l[i], temp+<span class="number">1</span>);</span><br><span class="line">			&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">				hashMap.put(l[i], <span class="number">1</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		HashSet&lt;Long&gt; hashSet = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">		<span class="keyword">long</span> max1=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(hashMap.get(l[i])&gt;=<span class="number">2</span>) &#123;</span><br><span class="line">				hashSet.add(l[i]);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(hashMap.get(l[i])&gt;=<span class="number">4</span>)&#123;</span><br><span class="line">				<span class="keyword">if</span>(l[i]&gt;max1)</span><br><span class="line">					max1=l[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;		</span><br><span class="line">		<span class="keyword">long</span> max = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span>(max1!=<span class="number">0</span>)</span><br><span class="line">			max = max1*max1;</span><br><span class="line">		ArrayList&lt;Long&gt; arrayList = <span class="keyword">new</span> ArrayList&lt;&gt;(hashSet);</span><br><span class="line">		Collections.sort(arrayList);</span><br><span class="line">		<span class="keyword">long</span> temp = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span>(arrayList.size()&gt;=<span class="number">2</span>) &#123;</span><br><span class="line">			temp = arrayList.get(arrayList.size()-<span class="number">1</span>)*arrayList.get(arrayList.size()-<span class="number">2</span>); </span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(temp&gt;max)</span><br><span class="line">			max=temp;</span><br><span class="line">		<span class="keyword">if</span>(max&gt;<span class="number">0</span>)</span><br><span class="line">			System.out.println(max);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			System.out.println(-<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.nowcoder.com/discuss/457642?type=post&order=create&pos=&page=2&channel=666&source_id=search_post" target="_blank" rel="noopener">牛客老哥<strong><strong>椰子皮</strong></strong>的优化版本</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> n = scanner.nextInt();</span><br><span class="line">        <span class="keyword">long</span>[] lines = <span class="keyword">new</span> <span class="keyword">long</span>[n];</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; n) &#123;</span><br><span class="line">            lines[i++] = scanner.nextInt();</span><br><span class="line">        &#125;</span><br><span class="line">        Arrays.sort(lines);</span><br><span class="line">        List&lt;Long&gt; side = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (side.size() &gt;= <span class="number">2</span>) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; lines[i] == lines[i - <span class="number">1</span>]) &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (count &gt;= <span class="number">4</span>) &#123;</span><br><span class="line">                    side.add(lines[i]);</span><br><span class="line">                    side.add(lines[i]);</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (count &gt;= <span class="number">2</span>) &#123;</span><br><span class="line">                    side.add(lines[i]);</span><br><span class="line">                &#125;</span><br><span class="line">                count = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (side.size() &lt; <span class="number">2</span>) &#123;</span><br><span class="line">            System.out.println(-<span class="number">1</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(side.get(<span class="number">0</span>) * side.get(<span class="number">1</span>));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目2：排序"><a href="#题目2：排序" class="headerlink" title="题目2：排序"></a>题目2：排序</h2><p><strong>题目描述：</strong> </p>
+<p>有一种排序算法定义如下，该排序算法每次只能把一个元素提到序列的开头，例如2，1，3，4，只需要一次操作把1提到序列起始位置就可以使得原序列从小到大有序。现在给你个乱序的1-n的排列，请你计算最少需要多少次操作才可以使得原序列从小到大有序。 </p>
+<p><strong>输入描述</strong> </p>
+<p>输入第一行包含两个正整数n ，表示序列的长度。(1&lt;=n&lt;=100000) </p>
+<p>接下来一行有n个正整数，表示序列中的n个元素，中间用空格隔开。(1&lt;=a_i&lt;=n) </p>
+<p><strong>输出描述</strong> </p>
+<p>输出仅包含一个整数，表示最少的操作次数。 </p>
+<p><strong>样例输入</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4 2 1 3 4</span><br></pre></td></tr></table></figure>
+
+<p><strong>样例输出</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p><strong>解题思路：</strong>首先比较数组中第1大和第2大的数字，如果第1大的数字排在第2大的数字之前，则将第2大的数字放到数组最前面，然后依次比较第2大和第3大、第3大和第4大。。。每次比较若出现需要把数字放到最前的操作就count++，直到比较完毕以后输出记录值。</p>
+<p><strong>代码思路：</strong>先拷贝一个同等长度的数组得到排序后的数组，遍历排序后的数组，用一个HashMap记录数组中的值和对应索引。定义修改后的索引值index=0和操作数count=0；然后进行上面的比较，如果需要进行操作，就把要放到数组最前的那个值在HashMap中的索引改为–index；同时count++。遍历完数组以后输出count==0 ? -1 : count。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> guanglianda;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">sort</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		HashMap&lt;Integer, Integer&gt; hashMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">		Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> len = scanner.nextInt();</span><br><span class="line">		<span class="keyword">int</span>[] array = <span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">			array[i]=scanner.nextInt();</span><br><span class="line">			hashMap.put(array[i], i);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span>[] arraySort = Arrays.copyOf(array, len);</span><br><span class="line"> 		Arrays.sort(arraySort);</span><br><span class="line">		</span><br><span class="line"> 		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arraySort.length; i++) &#123;</span><br><span class="line">			array[i]=arraySort[len-<span class="number">1</span>-i];</span><br><span class="line">		&#125;</span><br><span class="line">        </span><br><span class="line"> 		<span class="keyword">int</span> t=<span class="number">0</span>,count=<span class="number">0</span>;</span><br><span class="line"> 		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len-<span class="number">1</span>;i++)&#123;</span><br><span class="line"> 			<span class="keyword">if</span>(hashMap.get(array[i])&lt;hashMap.get(array[i+<span class="number">1</span>]))&#123;</span><br><span class="line"> 				hashMap.put(array[i+<span class="number">1</span>], --t);</span><br><span class="line"> 				count++;</span><br><span class="line"> 	    	&#125;</span><br><span class="line"> 		&#125;</span><br><span class="line"> 		System.out.println(count);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目三"><a href="#题目三" class="headerlink" title="题目三"></a>题目三</h2><p><strong>题目描述：</strong>  在一个2D横版游戏中，所有的怪物都是在X轴上的，每个怪物有两个属性X和HP，分别代表怪物的位置和生命值。 玩家控制的角色有一个AOE（范围攻击）技能，玩家每次释放技能可以选择一个位置x，技能会对[x-y,x+y]范围内的所有怪物造成1点伤害，请问，玩家最少需要使用多少次技能，才能杀死所有怪物，怪物血量清0即视为被杀死。 </p>
+<p><strong>输入描述</strong> </p>
+<p>输入第一行包含一个两个正整数n和y，分别表示怪物的数量和技能的范围。（1&lt;=n&lt;=100000） </p>
+<p>接下来有n行，每行有两个正整数x和hp分别表示一只怪物的位置和血量。(1&lt;=x,hp&lt;=10^9) </p>
+<p><strong>输出描述</strong> </p>
+<p>输出仅包含一个整数，表示最少使用的技能次数。 </p>
+<p><strong>样例输入</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 5 1 10 10 5 22 3</span><br></pre></td></tr></table></figure>
+
+<p><strong>样例输出</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">13</span><br></pre></td></tr></table></figure>
+
+<p><strong>思路：</strong>考试的时候毫无思路。</p>
+<p><a href="https://www.nowcoder.com/discuss/457642?type=post&order=create&pos=&page=2&channel=666&source_id=search_post" target="_blank" rel="noopener">借用牛客老哥<strong><strong>椰子皮</strong></strong>的思路和代码</a></p>
+<p>把怪兽按位置由小到大排序，一直攻击，直到把最左边的打死，顺便打死点p + 2 * range之间的，最左边的死了，攻击它右边第一个血量&gt;0的，直到都打死。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main3</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> time = <span class="number">0</span>;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">        <span class="keyword">int</span> range = sc.nextInt();</span><br><span class="line">        <span class="keyword">int</span>[][] position = <span class="keyword">new</span> <span class="keyword">int</span>[n][<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            position[i][<span class="number">0</span>] = sc.nextInt();</span><br><span class="line">            position[i][<span class="number">1</span>] = sc.nextInt();</span><br><span class="line">        &#125;</span><br><span class="line">        Arrays.sort(position, Comparator.comparingInt(p -&gt; p[<span class="number">0</span>]));</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (position[i][<span class="number">1</span>] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">int</span> tmp = position[i][<span class="number">1</span>];</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; n; j++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (position[j][<span class="number">0</span>] - position[i][<span class="number">0</span>] &lt;= range * <span class="number">2</span>) &#123;</span><br><span class="line">                        position[j][<span class="number">1</span>] -= tmp;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                time += tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(time);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="浪潮"><a href="#浪潮" class="headerlink" title="浪潮"></a>浪潮</h1><h2 id="题目1"><a href="#题目1" class="headerlink" title="题目1"></a>题目1</h2><h2 id="题目2"><a href="#题目2" class="headerlink" title="题目2"></a>题目2</h2><h1 id="SHEIN"><a href="#SHEIN" class="headerlink" title="SHEIN"></a>SHEIN</h1><h2 id="题目1-1"><a href="#题目1-1" class="headerlink" title="题目1"></a>题目1</h2>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔试</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://dingpeikuan.github.io/2020/07/24/%E7%AC%94%E8%AF%95%E5%A4%8D%E7%9B%98/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/07/23/%E5%89%91%E6%8C%87offer%E7%B3%BB%E5%88%97/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">剑指offer系列</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -226,9 +397,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
